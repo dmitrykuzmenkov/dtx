@@ -1,0 +1,19 @@
+{
+  "name": "dtx",
+  "version": "0.0.1",
+  "description": "Lightweight date time manipulation library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrykuzmenkov/dtx.git"
+  },
+  "author": "Dmitry Kuzmenkov <dmitry@wagh.ru> (http://dmitrykuzmenkov.ru)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmitrykuzmenkov/dtx/issues"
+  },
+  "homepage": "https://github.com/dmitrykuzmenkov/dtx#readme"
+}
