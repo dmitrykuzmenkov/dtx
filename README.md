@@ -52,5 +52,5 @@ Return Date object of current date in object.
 ### add(count, type)
 Add *count* of *type* (second, minute, houre, day, week, month, year) to current date and returns this.
 
-### subtruct(count, type)
+### subtract(count, type)
 Alias for add method with negative count value.
