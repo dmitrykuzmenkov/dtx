@@ -32,6 +32,9 @@ Return formated string with pattern
 - **%M** - The minute as a decimal number (range 00 to 59).
 - **%S** - The second as a decimal number (range 00 to 60). (The range is up to 60 to allow for occasional leap seconds.)
 
+- **%u** - The day of the week as a decimal, range 1 to 7, Monday being 1. See also %w. (SU)
+- **%w** - The day of the week as a decimal, range 0 to 6, Sunday being 0. See also %u.
+
 - **%p** - Either "AM" or "PM" according to the given time value, or the corresponding strings for the current locale. Noon is treated as "PM" and midnight as "AM".
 - **%P** - Like %p but in lowercase: "am" or "pm" or a corresponding string for the current locale. (GNU)
 

@@ -74,6 +74,8 @@ module.exports = function (input) {
         .replace('%I', ('0' + (date.getHours() % 12 || 12)))
         .replace('%M', ('0' + date.getMinutes()))
         .replace('%S', ('0' + date.getSeconds()))
+        .replace('%u', date.getDay() + 1)
+        .replace('%w', date.getDay())
         .replace('%p', ampm)
         .replace('%P', ampm.toUpperCase())
       ;
