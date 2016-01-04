@@ -15,8 +15,8 @@ Follow example
 
 ```javascript
 var dt = require('dtx');
-console.log(dt().format('YYYY-MM-DD')); // Prints current date in format
-console.log(dt().add(1, 'week').format('YYYY-MM-DD')); // Prints next week in prefered format
+console.log(dt().format('%Y-%m-%d')); // Prints current date in format
+console.log(dt().add(1, 'week').format('%F')); // Prints next week in prefered format
 ```
 
 ## Methods
