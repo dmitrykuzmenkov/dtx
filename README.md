@@ -32,6 +32,7 @@ Return formated string using pattern
 - **%M** - The minute as a decimal number (range 00 to 59).
 - **%S** - The second as a decimal number (range 00 to 60). (The range is up to 60 to allow for occasional leap seconds.)
 
+- **%s** - The number of seconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). (TZ)
 - **%u** - The day of the week as a decimal, range 1 to 7, Monday being 1. See also **%w**. (SU)
 - **%w** - The day of the week as a decimal, range 0 to 6, Sunday being 0. See also **%u**.
 

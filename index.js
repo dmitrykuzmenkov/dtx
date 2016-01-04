@@ -82,6 +82,7 @@ module.exports = function (input) {
         .replace('%u', date.getDay() + 1)
         .replace('%w', date.getDay())
         .replace('%z', tz_offset)
+        .replace('%s', date.getTime())
         .replace('%p', ampm)
         .replace('%P', ampm.toUpperCase())
       ;
