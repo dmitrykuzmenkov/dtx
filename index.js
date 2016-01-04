@@ -60,6 +60,11 @@ module.exports = function (input) {
     },
     format: function (format) {
       var ampm = date.getHours() < 12 ? 'AM' : 'PM';
+      var tz_offsec = date.getTimezoneOffset();
+      var tz_offset = (tz_offsec > 0 ? '+' : '-') +
+        ('0' + (Math.abs(tz_offsec) / 60)).slice(-2) +
+        ('0' + (Math.abs(tz_offsec) % 60)).slice(-2)
+      ;
       return format
         .replace('%F', '%Y-%m-%d')
         .replace('%D', '%m/%d/%y')
@@ -76,6 +81,7 @@ module.exports = function (input) {
         .replace('%S', ('0' + date.getSeconds()))
         .replace('%u', date.getDay() + 1)
         .replace('%w', date.getDay())
+        .replace('%z', tz_offset)
         .replace('%p', ampm)
         .replace('%P', ampm.toUpperCase())
       ;
