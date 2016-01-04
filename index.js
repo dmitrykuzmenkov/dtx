@@ -59,15 +59,23 @@ module.exports = function (input) {
       return date;
     },
     format: function (format) {
+      var ampm = date.getHours() < 12 ? 'AM' : 'PM';
       return format
         .replace('%F', '%Y-%m-%d')
+        .replace('%D', '%m/%d/%y')
+        .replace('%R', '%H:%M')
+        .replace('%r', '%I:%M:%S %p')
+        .replace('%T', '%H:%M:%S')
         .replace('%Y', date.getFullYear())
         .replace('%y', date.getYear())
         .replace('%m', ('0' + (date.getMonth() + 1)).slice(-2))
         .replace('%d', ('0' + (date.getDate() + 1)).slice(-2))
         .replace('%H', ('0' + date.getHours()))
+        .replace('%I', ('0' + (date.getHours() % 12 || 12)))
         .replace('%M', ('0' + date.getMinutes()))
         .replace('%S', ('0' + date.getSeconds()))
+        .replace('%p', ampm)
+        .replace('%P', ampm.toUpperCase())
       ;
     }
   };
