@@ -60,13 +60,14 @@ module.exports = function (input) {
     },
     format: function (format) {
       return format
-        .replace('YYYY', date.getFullYear())
-        .replace('YY', date.getYear())
-        .replace('MM', ('0' + (date.getMonth() + 1)).slice(-2))
-        .replace('DD', ('0' + (date.getDate() + 1)).slice(-2))
-        .replace('hh', ('0' + date.getHours()))
-        .replace('mm', ('0' + date.getMinutes()))
-        .replace('ss', ('0' + date.getSeconds()))
+        .replace('%F', '%Y-%m-%d')
+        .replace('%Y', date.getFullYear())
+        .replace('%y', date.getYear())
+        .replace('%m', ('0' + (date.getMonth() + 1)).slice(-2))
+        .replace('%d', ('0' + (date.getDate() + 1)).slice(-2))
+        .replace('%H', ('0' + date.getHours()))
+        .replace('%M', ('0' + date.getMinutes()))
+        .replace('%S', ('0' + date.getSeconds()))
       ;
     }
   };
