@@ -74,7 +74,7 @@ module.exports = function (input) {
         .replace('%Y', date.getFullYear())
         .replace('%y', date.getYear())
         .replace('%m', ('0' + (date.getMonth() + 1)).slice(-2))
-        .replace('%d', ('0' + (date.getDate() + 1)).slice(-2))
+        .replace('%d', ('0' + date.getDate()).slice(-2))
         .replace('%H', ('0' + date.getHours()))
         .replace('%I', ('0' + (date.getHours() % 12 || 12)))
         .replace('%M', ('0' + date.getMinutes()))
