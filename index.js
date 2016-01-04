@@ -64,9 +64,9 @@ module.exports = function (input) {
         .replace('YY', date.getYear())
         .replace('MM', ('0' + (date.getMonth() + 1)).slice(-2))
         .replace('DD', ('0' + (date.getDate() + 1)).slice(-2))
-        .replace('HH', ('0' + date.getHours()))
-        .replace('MM', ('0' + date.getMinutes()))
-        .replace('SS', ('0' + date.getSeconds()))
+        .replace('hh', ('0' + date.getHours()))
+        .replace('mm', ('0' + date.getMinutes()))
+        .replace('ss', ('0' + date.getSeconds()))
       ;
     }
   };
