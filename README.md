@@ -55,3 +55,16 @@ Add *count* of *type* (second, minute, houre, day, week, month, year) to current
 
 ### subtract(count, type)
 Alias for add method with negative count value.
+
+### diff(dtx, type)
+Get diff between two dtx objects. *Type* can be one of second, minute, houre, day, week, month, year.
+
+For example:
+```javascript
+var dtx = require('dtx');
+
+var dt1 = dtx('2015-10-10');
+var dt1 = dtx('2015-01-01');
+
+console.log(dt2.diff(dt1, 'days'));
+```

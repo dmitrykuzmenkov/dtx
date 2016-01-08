@@ -1,6 +1,6 @@
 {
   "name": "dtx",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "Lightweight date time manipulation library",
   "keywords": ["date", "time", "parse", "format"],
   "main": "index.js",

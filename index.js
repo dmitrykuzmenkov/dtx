@@ -1,3 +1,7 @@
+var month_diff = function (date1, date2) {
+  return ((date2.getFullYear() - date1.getFullYear()) * 12) + (date2.getMonth() - date1.getMonth());
+};
+
 module.exports = function (input) {
   var date;
   if (typeof(input) === 'string') {
@@ -54,6 +58,53 @@ module.exports = function (input) {
           break;
       }
       return this;
+    },
+    diff: function (dtx, type) {
+      var diff_ms = (date - dtx.toDate());
+      var diff = 0;
+
+      switch (type) {
+        case 'second':
+        case 'seconds':
+        case 'sec':
+        case 'secs':
+          diff = diff_ms / 1e3;
+          break;
+
+        case 'minute':
+        case 'minutes':
+        case 'min':
+        case 'mins':
+          diff = diff_fs / 6e4;
+          break;
+
+        case 'hour':
+        case 'hours':
+          diff = diff_ts / 36e5;
+          break;
+
+        case 'day':
+        case 'days':
+          diff = diff_ts / 864e5;
+          break;
+
+        case 'month':
+        case 'months':
+          diff = month_diff(dtx.toDate(), date);
+          break;
+
+        case 'year':
+        case 'years':
+          diff = month_diff(dtx.toDate(), date) / 12;
+          break;
+
+        case 'week':
+        case 'weeks':
+          diff = diff_ms / 6048e5;
+          break;
+      }
+
+      return Math.floor(diff);
     },
     toDate: function () {
       return date;
