@@ -22,19 +22,19 @@ module.exports = function (input) {
         case 'seconds':
         case 'sec':
         case 'secs':
-          date.setTime(date.getTime() + count * 1000);
+          date.setTime(date.getTime() + count * 1e3);
           break;
 
         case 'minute':
         case 'minutes':
         case 'min':
         case 'mins':
-          date.setTime(date.getTime() + count * 60000);
+          date.setTime(date.getTime() + count * 6e4);
           break;
 
         case 'hour':
         case 'hours':
-          date.setTime(date.getTime() + count * 3600000);
+          date.setTime(date.getTime() + count * 36e5);
           break;
 
         case 'day':
