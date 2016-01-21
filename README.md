@@ -4,7 +4,7 @@ Lightweight date time manipulating library.
 
 ## Installation
 
-Use npm package manager to install the DOM delegator
+Use npm package manager to install the DTX
 ```bash
 npm install dtx
 ```
@@ -64,7 +64,7 @@ For example:
 var dtx = require('dtx');
 
 var dt1 = dtx('2015-10-10');
-var dt1 = dtx('2015-01-01');
+var dt2 = dtx('2015-01-01');
 
 console.log(dt2.diff(dt1, 'days'));
 ```

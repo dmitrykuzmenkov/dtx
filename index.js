@@ -75,17 +75,17 @@ module.exports = function (input) {
         case 'minutes':
         case 'min':
         case 'mins':
-          diff = diff_fs / 6e4;
+          diff = diff_ms / 6e4;
           break;
 
         case 'hour':
         case 'hours':
-          diff = diff_ts / 36e5;
+          diff = diff_ms / 36e5;
           break;
 
         case 'day':
         case 'days':
-          diff = diff_ts / 864e5;
+          diff = diff_ms / 864e5;
           break;
 
         case 'month':
